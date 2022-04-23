@@ -24,7 +24,7 @@ export default async function (req: NextApiRequest, res: NextApiResponse) {
       expiresIn: "8h"
     });
 
-    res.setHeader("Set-Cookie", cookie.serialize("TRAX_ACCESS_COOKIE", token, {
+    res.setHeader("Set-Cookie", cookie.serialize("TRAX_ACCESS_TOKEN", token, {
     httpOnly: true,
     maxAge: 8 * 60 * 60,
     path: "/",
